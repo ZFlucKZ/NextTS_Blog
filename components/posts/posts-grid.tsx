@@ -15,10 +15,12 @@ type post = {
 const PostsGrid = (props: { posts: Array<post> }) => {
   const { posts } = props;
 
+  // console.log(posts);
+
   return (
     <ul className={classes.grid}>
       {posts.map((post, index) => (
-        <PostItem post={post} key={index} />
+        <PostItem post={post} key={post.slug} />
       ))}
     </ul>
   );
